@@ -41,7 +41,7 @@ jobs:
       env:
         BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
         BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
-        BROWSERSTACK_APP_ID: ${{ secrets.BROWSERSTACK_APP_ID }}
+        BROWSERSTACK_APP_ID: ${{ secrets.BROWSERSTACK_ANDROID_APP_ID }}
         PASSWORD: ${{ secrets.PASSWORD }}
         EMAIL: ${{ secrets.EMAIL }}
       continue-on-error: true
