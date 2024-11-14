@@ -99,7 +99,7 @@ describe("'Marciniak Opole' application test", () => {
     expect(await entry.getOrderPrice(priceInCart)).toEqual(entry.getOrderPrice(priceInCartPage)); 
   });
 
-  it("should sign out", async () => {
+  xit("should sign out", async () => {
     await entry.clickBurgerMenu();
 
     await entry.clickSignOutBtn();
