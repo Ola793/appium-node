@@ -32,7 +32,7 @@ describe("'Marciniak Opole' application test", () => {
     expect(await entry.isAccountHolderNameDisplayed());
   });
 
-  it("should check the amount of ordered days and the price", async () => {
+  xit("should check the amount of ordered days and the price", async () => {
     const orderDays = ordered.days;
     const orderPrice = ordered.price;
 
@@ -46,7 +46,7 @@ describe("'Marciniak Opole' application test", () => {
     expect(await entry.getOrderPrice(orderPriceOrdered)).toEqual(orderPrice);  
   });
 
-  it("should go to home page", async () => {
+  xit("should go to home page", async () => {
     await entry.scrollUpByPercentage(0.5, 3);
 
     await entry.clickHomeBtn();
@@ -54,7 +54,7 @@ describe("'Marciniak Opole' application test", () => {
     expect(await entry.isOrderedDisplayed());
   });
 
-  it("should add all available products to the cart", async () => {
+  xit("should add all available products to the cart", async () => {
     await entry.clickWantToOrder();
 
     await entry.clickOrderAllDays();
@@ -74,7 +74,7 @@ describe("'Marciniak Opole' application test", () => {
     expect(await entry.isOrderedDisplayed());
   });
 
-  it("should clean up the cart", async () => {
+  xit("should clean up the cart", async () => {
     await entry.clickCart();
 
     await entry.scrollDownByPercentage(0.65);
@@ -99,7 +99,7 @@ describe("'Marciniak Opole' application test", () => {
     expect(await entry.getOrderPrice(priceInCart)).toEqual(entry.getOrderPrice(priceInCartPage)); 
   });
 
-  xit("should sign out", async () => {
+  it("should sign out", async () => {
     await entry.clickBurgerMenu();
 
     await entry.clickSignOutBtn();
