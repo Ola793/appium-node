@@ -37,7 +37,7 @@ jobs:
 
     # Run WebdriverIO tests on BrowserStack
     - name: Run WebdriverIO tests on BrowserStack
-      run: npx wdio run wdio.conf.js
+      run: npm run test:android
       env:
         BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
         BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
@@ -49,7 +49,7 @@ jobs:
     # Generate Allure Report
     - name: Generate Allure Report
       if: always()
-      run: allure generate allure-results --clean -o allure-report
+      run: npm run allure:generate
 
     # Upload WebdriverIO test results as artifact (optional)
     - uses: actions/upload-artifact@v3
