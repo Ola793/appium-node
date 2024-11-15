@@ -12,6 +12,10 @@ export const config = {
           deviceName: 'Samsung Galaxy S22 Ultra',
           osVersion: '12.0',
           deviceOrientation: 'portrait',
+          acceptInsecureCerts: true,
+          autoGrantPermissions: true,
+          geoLocation: "PL",
+          timezone: "Warsaw"
         }
       }],
     services: [
